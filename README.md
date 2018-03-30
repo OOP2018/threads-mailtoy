@@ -73,13 +73,16 @@ method isn't synchronized, but it still fixes the error in problem 1. Explain wh
 A: AtomicCounter use AtomicLong, AtomicLong is already lock.lock() and lock.unlock().
 
 5.2 Describe why and when you would use AtomicLong (or AtomicDouble, AtomicInteger) in a program.
-A: ทั้งคลาสมีtypeแค่อันเดียวคือlong แล้ว เราจะใช้เพราะว่ามันจะใช้เวลาน้อยกว่า ่It's optimize by java.
+A: Have only long type then AtomicCounter is faster than synchronized. ่It's optimize by java.
 
 ## 6. Analysis of Results
 
 answer question 6
 
 6.1 Compare the average run-times of all the solutions. Which one is fastest? Which is slowest?
+A: Using ReentrantLock  > Syncronized method > AtomicLong for total
+Using ReentrantLock is slowest. tomicLong for total is fastest.
+
 6.2. Which of the above solutions can be applied to the broadest range of problems where you need to ensure that only one thread modifies the resource at any one time? The "resource" could be a lot more complex than adding to a single variable (such as a List) .
 Give an explanation and example to support your answer.
 
