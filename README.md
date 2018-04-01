@@ -35,7 +35,10 @@ value too, so it’s not zero.
 
 ## 2. Implications for Multi-threaded Applications
 ```
-A: If people withdraw or deposit money from the same account at the same time. In the case of the original account has 1000 baht, but people will withdraw 1000 and another person will deposit 500 baht. Now that the withdrawal money and update the remaining money back to it will be zero. In fact, the remaining money in the account 500.
+A: If people withdraw or deposit money from the same account at the same time. In the case of 
+the original account has 1000 baht, but people will withdraw 1000 and another person will 
+deposit 500 baht. Now that the withdrawal money and update the remaining money back to it will 
+be zero. In fact, the remaining money in the account 500.
 ```
 
 How might this affect real applications?  
@@ -55,14 +58,17 @@ A: Because problem 1 doesn't use lock() and unlock() method.
 
 3.3 What does a ReentrantLock do? Why (and when) would you use it in a program?
 ```
-A: If thread1 use counter, so thread2 can not use count value as same time (lock.lock()) until thread1 finished, then thread2 will use counter value. The total always zero.
+A: If thread1 use counter, so thread2 can not use count value as same time (lock.lock()) until 
+thread1 finished, then thread2 will use counter value. The total always zero.
 
-We use it in a program when we want only one thread can use value, another thread can use after thread don't lock or unlock.
+We use it in a program when we want only one thread can use value, another thread can use after 
+thread don't lock or unlock.
 ```
 
 3.4 Why do we write "finally { lock.unlock(); }" in the code?
 ```
-A: Because thread lock.lock ,so another thread can not use counter. Use lock.unlock() for thread2 can use counter.
+A: Because thread lock.lock ,so another thread can not use counter. Use lock.unlock() for 
+thread2 can use counter.
 ```
 
 ## 4. Counter with synchronized method
@@ -83,7 +89,8 @@ A: It use synchronized for lock the method, so that another thread can not acces
 ```
 A: When thread1 use the method, so that thread2 can not access the method as the same time.
 
-We use it in a program when we want only one thread can use method, or the method have a few statement it do not waste your time to declare Lock.
+We use it in a program when we want only one thread can use method, or the method have a few 
+statement it do not waste your time to declare Lock.
 ```
 
 
@@ -113,7 +120,8 @@ Using ReentrantLock is slowest. tomicLong for total is fastest.
 
 6.2. Which of the above solutions can be applied to the broadest range of problems where you need to ensure that only one thread modifies the resource at any one time? The "resource" could be a lot more complex than adding to a single variable (such as a List).
 ```
-A: Syncronized method, it do not waste your time to declare Lock.  Unlimited types of variables to use.
+A: Syncronized method, it do not waste your time to declare Lock. Unlimited types of variables 
+to use.
 ```
 
 ## 7. Using Many Threads (optional)
