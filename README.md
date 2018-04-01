@@ -27,7 +27,10 @@ The threads use the counter to add and subtract values.
 answer the questions (1.1 - 1.3)
 Q: Run the ThreadSum program using limit = 1,000 (a small number). Run it several times (5 or more). The total should be zero. Is it? Is the total always the same?
 ```
-A: The total should be zero, but thread1 run same time as thread2 and use the same counter. Sometimes thread1 and thread2 call counter at the same time. It's possible that thread1 run finished before thread2 then replace  new counter value. After that thread2 replace  new counter value too, so it’s not zero.
+A: The total should be zero, but thread1 run same time as thread2 and use the same counter. 
+Sometimes thread1 and thread2 call counter at the same time. It's possible that thread1 run 
+finished before thread2 then replace  new counter value. After that thread2 replace new counter 
+value too, so it’s not zero.
 ```
 
 ## 2. Implications for Multi-threaded Applications
