@@ -43,7 +43,7 @@ be zero. In fact, the remaining money in the account 500.
 ``` 
 
 ## 3. Counter with ReentrantLock
-/br
+
 answer questions 3.1 - 3.4
 
 3.1 Describe the results. Is the total always zero? Record the average runtime in README.md
@@ -97,6 +97,7 @@ statement it do not waste your time to declare Lock.
 ## 5. Counter with AtomicLong
 
 answer question 5
+
 5.1 Run the program a few times. AtomicCounter does not use a lock (like problem 3) and the add
 method isn't synchronized, but it still fixes the error in problem 1. Explain why.
 ```
