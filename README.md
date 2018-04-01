@@ -25,6 +25,7 @@ The threads use the counter to add and subtract values.
 ## 1. Using unsynchronized counter object
 
 answer the questions (1.1 - 1.3)
+
 Q: Run the ThreadSum program using limit = 1,000 (a small number). Run it several times (5 or more). The total should be zero. Is it? Is the total always the same?
 ```
 A: The total should be zero, but thread1 run same time as thread2 and use the same counter. 
@@ -39,13 +40,12 @@ A: If people withdraw or deposit money from the same account at the same time. I
 the original account has 1000 baht, but people will withdraw 1000 and another person will 
 deposit 500 baht. Now that the withdrawal money and update the remaining money back to it will 
 be zero. In fact, the remaining money in the account 500.
-```
-
-How might this affect real applications?  
+``` 
 
 ## 3. Counter with ReentrantLock
-
+/br
 answer questions 3.1 - 3.4
+
 3.1 Describe the results. Is the total always zero? Record the average runtime in README.md
 ```
 A: Yes, the total always zero.
